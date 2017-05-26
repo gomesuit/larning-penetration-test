@@ -17,6 +17,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #host.vm.network 'private_network', ip: _PRIVATE_IP_ADDRESS
     #host.vm.network :public_network, bridge: 'en0: Wi-Fi (AirPort)'
     #host.vm.provision :shell, path: 'provision.sh', privileged: false
-    #host.vm.provision :shell, path: 'provision.sh'
+    host.vm.provision :shell, path: 'provision.sh'
   end
 end
