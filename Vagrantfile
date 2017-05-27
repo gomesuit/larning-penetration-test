@@ -9,6 +9,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.username = 'root'
   config.ssh.private_key_path = 'pentest-env'
 
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "3072"]
+    vb.gui = true
+  end
+
   config.vm.define :kali do |host|
     #_HOSTNAME = 'server'
     #_PRIVATE_IP_ADDRESS = '192.168.33.10'
